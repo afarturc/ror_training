@@ -10,17 +10,13 @@ puts "Total number of visiting birds: #{WEEK_COUNTS.sum}"
 # number of days where five or more birds visited
 puts "Number of days where five or more birds visited: #{WEEK_COUNTS.count { |c| c >= 5 }}"
 # days without birds
-puts "Days without birds: #{WEEK_COUNTS.count { |c| c == 0 }}"
+puts "Days without birds: #{WEEK_COUNTS.count(0)}"
 
 # Solution 2
 
 class BirdWatcher
   def initialize(weekly_counts)
     @weekly_counts = weekly_counts
-  end
-
-  def this_week_counts
-    @weekly_counts
   end
 
   def yesterday_counts
@@ -38,11 +34,13 @@ class BirdWatcher
   def days_without_visits
     @weekly_counts.count(0)
   end
+
+  attr_reader :weekly_counts
 end
 
 bird_watcher = BirdWatcher.new(WEEK_COUNTS)
 
-puts "This week bird visit counts: #{bird_watcher.this_week_counts}"
+puts "This week bird visit counts: #{bird_watcher.weekly_counts}"
 puts "Yesterday bird visit counts: #{bird_watcher.yesterday_counts}"
 puts "Total number of visiting birds: #{bird_watcher.total_visits}"
 puts "Number of days where five or more birds visited: #{bird_watcher.days_with_five_or_more_visits}"
