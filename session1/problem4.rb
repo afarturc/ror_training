@@ -73,9 +73,12 @@ end
 not_nums = [1]
 nums1 = [1, 2, 3, 4]
 nums2 = [-1, 1, 0, -3, 3]
+nums3 = [10, 3, 5, 6, 2]
 
 puts "Input: #{nums1}, Output: #{product_except_self(nums1)}"
 puts "Input: #{nums1}, Output: #{product_except_self2(nums1)}"
 puts "Input: #{nums2}, Output: #{product_except_self(nums2)}"
 puts "Input: #{nums2}, Output: #{product_except_self2(nums2)}"
+puts "Input: #{nums3}, Output: #{product_except_self(nums3)}"
+puts "Input: #{nums3}, Output: #{product_except_self2(nums3)}"
 puts "Input: #{not_nums}, Output: #{product_except_self(not_nums)}"
