@@ -33,7 +33,7 @@ end
 words = ["nail", "", "horse", "rider", "message", "battle", "kingdom"]
 
 generator = ProverbGenerator.new(words)
-generator.gen
+generator.generate
 
 puts
 
